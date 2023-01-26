@@ -14,6 +14,6 @@ public class Main {
         Car hyundai = new Car("Hyundai", "Avante", 1.6, "Оранжевый", 2016, "Южная Корея",
                 "АКПП", "Купе", "005", 2, true);
 
-        System.out.println(lada);
+        System.out.println(kia);
     }
 }

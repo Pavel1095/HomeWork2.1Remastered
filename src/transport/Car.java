@@ -1,16 +1,18 @@
 package transport;
 
+import java.time.Month;
+
 public class Car {
-    String brand;
-    String model;
+    final String brand;
+    final String model;
     double engineVolume;
     String color;
-    int productionYear;
-    String productionCountry;
+    final int productionYear;
+    final String productionCountry;
     String transmissionType;
-    String bodyType;
+    final String bodyType;
     String licencePlate;
-    int seats;
+    final int seats;
     boolean tires;
 
     public String toString() {
@@ -32,35 +34,42 @@ public class Car {
         this.seats = seats;
         this.tires = tires;
 
-        if (this.brand == null || this.brand.isEmpty())
-            this.brand = "Default";
+        if (this.brand == null || this.brand.isEmpty()) {
+            setBrand("Default");
+        }
 
-        if (this.model == null || this.model.isEmpty())
-            this.model = "Default";
+        if (this.model == null || this.model.isEmpty()) {
+            setModel("Default");
+        }
 
-        if (this.productionCountry == null || this.productionCountry.isEmpty())
-            this.productionCountry = "Default";
+        if (this.productionCountry == null || this.productionCountry.isEmpty()) {
+            setProductionCountry("Default");
+        }
 
-        if (this.engineVolume <= 0)
-            this.engineVolume = 1.5;
+        if (this.engineVolume <= 0) {
+            setEngineVolume(1.5);
+        }
 
-        if (this.color == null || this.color.isEmpty())
+        if (this.color == null || this.color.isEmpty()) {
             this.color = "Белый";
+        }
 
-        if (this.productionYear <= 0)
-            this.productionYear = 2000;
+        if (this.productionYear <= 0) {
+            setProductionYear(2000);
+        }
+
     }
 
     public void setBrand(String brand) {
-        this.brand = brand;
+        getBrand();
     }
 
     public void setModel(String model) {
-        this.model = model;
+        getModel();
     }
 
     public void setEngineVolume(double engineVolume) {
-        this.engineVolume = engineVolume;
+        getEngineVolume();
     }
 
     public void setColor(String color) {
@@ -68,11 +77,11 @@ public class Car {
     }
 
     public void setProductionYear(int productionYear) {
-        this.productionYear = productionYear;
+        getProductionYear();
     }
 
     public void setProductionCountry(String productionCountry) {
-        this.productionCountry = productionCountry;
+        getProductionCountry();
     }
 
     public void setTransmissionType(String transmissionType) {
@@ -80,7 +89,7 @@ public class Car {
     }
 
     public void setBodyType(String bodyType) {
-        this.bodyType = bodyType;
+        getBodyType();
     }
 
     public void setLicencePlate(String licencePlate) {
@@ -88,7 +97,7 @@ public class Car {
     }
 
     public void setSeats(int seats) {
-        this.seats = seats;
+        getSeats();
     }
 
     public void setTires(boolean tires) {
